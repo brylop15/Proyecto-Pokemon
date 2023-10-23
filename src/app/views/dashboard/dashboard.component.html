@@ -1,0 +1,18 @@
+<section class="w-100 p-4 pb-4 d-flex justify-content-center align-items-center flex-column">
+  <div class="input-group w-50 justify-content-center">
+      <h2>Pokedex Nacional</h2>
+  </div>
+</section>
+<section class="w-100 p-4 pb-4 d-flex justify-content-center flex-column col-3">
+  <div class="pokemon-grid">
+    <div class="card" *ngFor="let pokemon of pokedexNacional">
+      <img src="{{ pokemon.sprites.front_default }}" class="card-img-top img-thumbnail rounded mx-auto d-block" alt="{{ pokemon.name }}" style="width: 40vw;"/>
+      <div class="card-body text-center">
+        <h5 class="card-title text-capitalize">{{ pokemon.name }}</h5>
+        <p class="card-text">Pokedex #{{ pokemon.id }}</p>
+        <p class="card-text">Altura {{ pokemon.height }}</p>
+        <p class="card-text">Peso {{ pokemon.weight }}</p>
+      </div>
+    </div>
+  </div>
+</section>
